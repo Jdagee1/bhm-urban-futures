@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import io
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 import zipfile
@@ -10,6 +11,7 @@ import pandas as pd
 import requests
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 RAW = ROOT / "data" / "raw"
 PROCESSED = ROOT / "data" / "processed"
 RAW.mkdir(parents=True, exist_ok=True)
